@@ -14,7 +14,7 @@ Con = pyexasol.connect(dsn="127.0.0.1:8899", user="sys", password ="exasol", sch
 
 
 # CREATE A USER IN DATABASE
-Con.execute("CREATE USER JANA IDENTIFIED BY \"exasol\"");
+Con.execute("CREATE USER RAVINDRA IDENTIFIED BY \"exasol\"");
 
 
 #print (Con.execute("DESCRIBE TEST"))
