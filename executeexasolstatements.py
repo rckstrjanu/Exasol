@@ -19,8 +19,8 @@ print("user created");
 Con.execute("CREATE ROLE "+role);
 print("Role created");
 
-Con.execute("GRANT ROLE "+role+" TO "+user);
-print("Role "+role+" has been assigned to user: "+user;
+#Con.execute("GRANT ROLE  TO "+user);
+print("Role "+role+" has been assigned to user: "+user);
 
-print ("SUCCESSFULL")
+print ("SUCCESSFULL");
 
