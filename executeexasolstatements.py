@@ -4,7 +4,7 @@ import pyexasol
 import sys
 
 # GET DB CONNECTION
-Con = pyexasol.connect(dsn="127.0.0.1:8899", user="sys", password ="exasol", schema ="TEST", compression=True);
+Con = pyexasol.connect(dsn="localhost:8888", user="sys", password ="exasol", schema ="TEST", compression=True);
 
 # GET THE SCHEMA AND EXECUTE STATEMENTS ON TABLES
 #Con.execute("OPEN SCHEMA TEST ");
