@@ -6,24 +6,21 @@ import sys
 # GET DB CONNECTION
 Con = pyexasol.connect(dsn="localhost:8888", user="sys", password ="exasol", schema ="TEST", compression=True);
 
-# GET THE SCHEMA AND EXECUTE STATEMENTS ON TABLES
-#Con.execute("OPEN SCHEMA TEST ");
-#Con.execute("SELECT * FROM TEST ");
-
-# INSERT DATA TO TABLE
-#Con.execute("INSERT INTO telephonelist (name, phone_number) VALUES ('JANARDHAN','1512')");
-
-
 user=str(sys.argv[1]);
 password=str(sys.argv[2]);
-
+role=str(sys.argv[3])
 print("user: "+user);
 print("password: "+password);
 
 # CREATE A USER IN DATABASE
 Con.execute("CREATE USER "+user+" IDENTIFIED BY "+password);
+print("user created");
 
+Con.execute("CREATE ROLE "+role);
+print("Role created");
 
-#print (Con.execute("DESCRIBE TEST"))
+Con.execute("GRANT ROLE "+role+" TO "+user);
+print("Role "+role+" has been assigned to user: "+user;
+
 print ("SUCCESSFULL")
 
