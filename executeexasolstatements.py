@@ -16,10 +16,10 @@ print("password: "+password);
 Con.execute("CREATE USER "+user+" IDENTIFIED BY "+password);
 print("user created");
 
-Con.execute("CREATE ROLE "+role);
-print("Role created");
+#Con.execute("CREATE ROLE "+role);
+#print("Role created");
 
-#Con.execute("GRANT ROLE  TO "+user);
+Con.execute("GRANT ROLE  TO "+user);
 print("Role "+role+" has been assigned to user: "+user);
 
 print ("SUCCESSFULL");
